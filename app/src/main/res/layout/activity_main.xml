@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a1a">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Moto Game Extension Pro"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#00BCD4"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Device Info -->
+        <TextView
+            android:id="@+id/deviceInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cargando información del dispositivo..."
+            android:textColor="#FFFFFF"
+            android:background="#2a2a2a"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Voice Changer Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎤 MODIFICADOR DE VOZ"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2a2a2a"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnToggleVoiceChanger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activar Voice Changer"
+                android:background="#00BCD4"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Efecto de voz:"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="5dp" />
+
+            <Spinner
+                android:id="@+id/voiceEffectSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tono de voz:"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="5dp" />
+
+            <SeekBar
+                android:id="@+id/pitchSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressTint="#00BCD4"
+                android:thumbTint="#00BCD4" />
+
+        </LinearLayout>
+
+        <!-- Game Tools Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎮 HERRAMIENTAS DE JUEGO"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:id="@+id/gameToolsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#2a2a2a"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Performance Boost"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <Switch
+                    android:id="@+id/performanceBoostSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="#4CAF50"
+                    android:trackTint="#666666" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/temperatureMonitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temperatura CPU: Calculando..."
+                android:textColor="#FFD700"
+                android:background="#333333"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abrir Game Time"
+                android:background="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:onClick="openGameTime" />
+
+        </LinearLayout>
+
+        <!-- Quick Actions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚡ ACCIONES RÁPIDAS"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#E91E63"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#2a2a2a"
+            android:padding="16dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DND Gaming"
+                android:background="#E91E63"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="5dp"
+                android:onClick="toggleDND" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RAM Boost"
+                android:background="#9C27B0"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="5dp"
+                android:onClick="boostRAM" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
